@@ -18,7 +18,7 @@ h1 {
 
 ul {
   position: relative;
-  top: 80px;
+  top: 90px;
   left: 20px;
 }
 
@@ -41,23 +41,25 @@ li {
 .overview {
   background: rgba(255, 255, 255, 0.38);
   border-radius: 10px;
-  height: 300px;
+  height: 350px;
   width: 1000px;
   margin-bottom: 20px;
 }
 
 .current-weather .current-temperature {
-  font-size: 40px;
+  font-size: 42px;
   position: relative;
-  top: 50px;
+  top: 70px;
   left: 70px;
+}
+
+.currentWeatherIcon {
+  width: 100px;
 }
 
 .current-weather .currentIcon {
   position: relative;
-  top: 40px;
-  width: 40px;
-  height: 40px;
+  top: 50px;
 }
 
 .units {
