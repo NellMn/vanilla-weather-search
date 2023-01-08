@@ -106,3 +106,13 @@ li {
   top: -80px;
   left: 20px;
 }
+
+.temperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.temperature .active:hover {
+  text-decoration: none;
+}

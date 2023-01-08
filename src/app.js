@@ -33,7 +33,9 @@ function showResult(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
-  currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
   maxTemperature.innerHTML = Math.round(response.data.main.temp_max);
   minTemperature.innerHTML = Math.round(response.data.main.temp_min);
   descriptionElement.innerHTML = response.data.weather[0].main;
@@ -62,7 +64,32 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("Oregon");
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+search("Oregon");
