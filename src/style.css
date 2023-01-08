@@ -1,3 +1,101 @@
+body {
+  font-family: Google Sans, arial, sans-serif;
+  background: linear-gradient(
+    63deg,
+    rgb(242, 168, 168) 2.9%,
+    rgb(94, 46, 165) 102.1%
+  );
+  height: 670px;
+}
+
 h1 {
-  color: aqua;
+  font-size: 44px;
+  position: relative;
+  color: #2b2c2f;
+  top: 40px;
+  left: 40px;
+}
+
+ul {
+  position: relative;
+  top: 80px;
+  left: 20px;
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+  color: rgb(114, 114, 114);
+}
+
+.weather-app-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.weather-app {
+  margin: 100px auto;
+  padding: 10px;
+}
+
+.overview {
+  background: rgba(255, 255, 255, 0.38);
+  border-radius: 10px;
+  height: 300px;
+  width: 1000px;
+  margin-bottom: 20px;
+}
+
+.current-weather .current-temperature {
+  font-size: 40px;
+  position: relative;
+  top: 50px;
+  left: 70px;
+}
+
+.current-weather .currentIcon {
+  position: relative;
+  top: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.units {
+  position: relative;
+  bottom: 15px;
+  font-size: 16px;
+}
+
+.currentWeatherProperties {
+  padding-top: 30px;
+  padding-left: 40px;
+  background: rgba(255, 255, 255, 0.38);
+  border-radius: 10px;
+  height: 100px;
+  width: 1000px;
+  font-size: 22px;
+  margin: 0 auto;
+}
+
+.locationSign {
+  width: 30px;
+}
+
+.humidityIcon {
+  width: 50px;
+}
+
+.windIcon {
+  width: 50px;
+}
+
+.visibility {
+  position: relative;
+  top: 5px;
+}
+
+.source {
+  position: relative;
+  top: -80px;
+  left: 20px;
 }
