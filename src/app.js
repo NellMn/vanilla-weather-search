@@ -22,7 +22,6 @@ function formatDate(timesTamp) {
 }
 
 function showResult(response) {
-  console.log(response);
   let currentTemperature = document.querySelector("#current-temperature");
   let maxTemperature = document.querySelector("#max-temperature");
   let minTemperature = document.querySelector("#min-temperature");
