@@ -31,6 +31,7 @@ function showResult(response) {
   let windElement = document.querySelector("#wind");
   let visibilityElement = document.querySelector("#visibility");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   maxTemperature.innerHTML = Math.round(response.data.main.temp_max);
@@ -41,9 +42,15 @@ function showResult(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   visibilityElement.innerHTML = response.data.visibility / 1000;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 
+let city = "Oregon";
 let apiKey = "258213fabfb6e561af7eeb257d2a3047";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tehran&units=metric&appid=${apiKey}`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
 axios.get(apiUrl).then(showResult);
