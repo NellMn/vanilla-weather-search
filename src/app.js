@@ -49,8 +49,20 @@ function showResult(response) {
   iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 
-let city = "Oregon";
-let apiKey = "258213fabfb6e561af7eeb257d2a3047";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+function search(city) {
+  let apiKey = "258213fabfb6e561af7eeb257d2a3047";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
-axios.get(apiUrl).then(showResult);
+  axios.get(apiUrl).then(showResult);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Oregon");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);

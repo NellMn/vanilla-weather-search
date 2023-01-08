@@ -8,6 +8,11 @@ body {
   height: 670px;
 }
 
+form {
+  position: relative;
+  left: 80px;
+}
+
 h1 {
   font-size: 44px;
   position: relative;
