@@ -5,7 +5,7 @@ body {
     rgb(242, 168, 168) 2.9%,
     rgb(94, 46, 165) 102.1%
   );
-  height: 670px;
+  height: 720px;
 }
 
 form {
@@ -39,7 +39,7 @@ li {
 }
 
 .weather-app {
-  margin: 80px auto;
+  margin: 30px auto;
   padding: 10px;
 }
 
@@ -103,7 +103,7 @@ li {
 
 .source {
   position: relative;
-  top: -80px;
+  top: -30px;
   left: 20px;
 }
 
@@ -115,4 +115,31 @@ li {
 
 .temperature .active:hover {
   text-decoration: none;
+}
+
+.weather-forecast {
+  text-align: center;
+  color: #000;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+  font-size: 14px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+
+#eachForecast {
+  background: rgba(255, 255, 255, 0.38);
+  padding: 10px 0;
+  width: 80px;
+  border-radius: 5px;
 }
