@@ -59,12 +59,12 @@ li {
 }
 
 .currentWeatherIcon {
-  width: 100px;
+  width: 120px;
 }
 
 .current-weather .currentIcon {
   position: relative;
-  top: 50px;
+  top: 30px;
 }
 
 .units {
@@ -125,12 +125,12 @@ li {
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 17px;
   opacity: 0.6;
 }
 
 .weather-forecast-temperatures {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .weather-forecast-temperature-min {
@@ -140,6 +140,7 @@ li {
 #eachForecast {
   background: rgba(255, 255, 255, 0.38);
   padding: 10px 0;
+  margin-right: 40px;
   width: 80px;
   border-radius: 5px;
 }
