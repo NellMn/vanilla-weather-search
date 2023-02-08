@@ -6,6 +6,7 @@ body {
     rgb(94, 46, 165) 102.1%
   );
   height: 1000px;
+  padding-top: 80px;
 }
 
 form {
